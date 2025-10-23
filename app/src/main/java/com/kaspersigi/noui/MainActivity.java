@@ -119,9 +119,19 @@ public class MainActivity extends Activity {
             finish();
             return;
         }
+    }
 
-        // 在后台线程中打开后置摄像头
+    @Override
+    protected void onResume() {
+        super.onResume();
+        // 现在 Activity 在前台，可以安全打开相机
         mBgHandler.post(() -> openBackCamera());
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        // 可选：在这里 cleanup 或 stop preview
     }
 
     /**
@@ -189,9 +199,9 @@ public class MainActivity extends Activity {
      */
     private void createCaptureSession() {
         try {
-            // Size jpegSize = chooseJpegSize();
+            Size jpegSize = chooseJpegSize();
             // 固定使用高分辨率 JPEG（可根据设备性能调整）
-            Size jpegSize = new Size(4032, 3024);
+            // Size jpegSize = new Size(4032, 3024);
 
             // 创建 ImageReader，队列大小 = BURST_COUNT + 缓冲（防止溢出）
             mImageReader = ImageReader.newInstance(
