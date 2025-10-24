@@ -274,6 +274,7 @@ public class MainActivity extends Activity {
                                                @NonNull TotalCaptureResult finalResult) {
                     // 打印完整结果（通常与 partialResult 内容一致，但更完整）
                     logCaptureResult("Preview Final Result", finalResult);
+                    checkAeAndTriggerBurst(finalResult);
                 }
             };
 
