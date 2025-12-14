@@ -35,11 +35,60 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NoUI">
         <activity
-            android:name=".MainActivity"
+            android:name=".BurstNZSLHeicActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BurstNZSLJpegActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".BurstZSLHeicActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".BurstZSLJpegActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".MFNRNZSLHeicActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".MFNRNZSLJpegActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".MFNRZSLHeicActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".MFNRZSLJpegActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".NeoBurstZSLHeicActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".NeoBurstZSLJpegActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SingleNZSLHeicActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SingleNZSLJpegActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SingleZSLHeicActivity"
+            android:exported="true">
+        </activity>
+        <activity
+            android:name=".SingleZSLJpegActivity"
+            android:exported="true">
         </activity>
     </application>
 
